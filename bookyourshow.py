@@ -67,14 +67,14 @@ class seats_():
         print('Do You Want to Book Your Ticket??')
         print('1.Yes')
         print('2.No')
-        s = int(input('Your Choice:'))
-        while s not in range(1, 3):
+        s = str(input('Your Choice:'))
+        while s!='1' and s!='2' or s.isdigit()==False:
             print('Your choice should be Either 1 or 2')
             print('1.Yes')
             print('2.No')
-            s = int(input('Your Choice:'))
+            s = str(input('Your Choice:'))
             continue
-        if s==1:
+        if s=='1':
             print('||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||')
             d = str(input('NAME:'))
             while re.findall('[0-9]|[@_!#$%^&*()<>?/|}{~:]',d):
@@ -117,7 +117,7 @@ class seats_():
             self.tickets=self.tickets+1
             print("Thank You!!!Your Ticket Got Booked..\nYour Seat is Shown Below as 'B'..")
             self.show_seats()
-        elif s==2:
+        elif s=='2':
             print('**************** Thank You...Hope see you soon!! ****************')
     def user_info(self):
         print('||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||')
